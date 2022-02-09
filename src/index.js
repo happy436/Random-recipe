@@ -8,11 +8,14 @@ import store from "./redux/redux-store"
 import { BrowserRouter } from 'react-router-dom';
 
 let reRender = (state) => {
+
+    const rootURL = "https://happy436.github.io/Random-recipe"
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <Header/>
+                <Header rootURL={rootURL}/>
                 <App
+                    rootURL={rootURL}
                     state={store.getState().RecipeReducer}
                     dispatch={store.dispatch}
                 />
