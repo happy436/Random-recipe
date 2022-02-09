@@ -2,6 +2,7 @@
   "name": "headworkers",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://happy436.github.io/Random-recipe/",
   "dependencies": {
     "@iconscout/react-unicons": "^1.1.6",
     "@testing-library/jest-dom": "^5.16.2",
