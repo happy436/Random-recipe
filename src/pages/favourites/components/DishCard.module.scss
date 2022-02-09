@@ -1,0 +1,174 @@
+.dishCard{
+  max-height: 495px;
+  width: 390px;
+  background-color: #F8F8F8;
+  position: relative;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .deleteButton{
+      position:absolute;
+      height:50px;
+      width:50px;
+      border-radius:50px;
+      top:0;
+      right:0;
+      z-index:11;
+      margin-right:30px;
+      margin-top:10px;
+      font-size:3rem;
+      color:#fff;
+      border:1px solid #fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+  }
+
+  .placeHolder {
+    position: relative;
+    z-index:10;
+  }
+
+  .placeHolder:after, .placeHolder:before {
+      position: absolute;
+      content: "";
+      background: red;
+  }
+
+  .placeHolder:after {
+      top: 50%;
+      left: -50px;
+      right: 0;
+      height: 10px;
+      width: 100px;
+      margin-top:-5px;
+      transform: rotate(45deg);
+  }
+
+  .placeHolder:before {
+      left: 50%;
+      top: -50px;
+      bottom: 0;
+      width: 10px; 
+      height: 100px;
+      margin-left:-5px;
+      transform: rotate(45deg);
+  }
+
+  .image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover, &:hover ~ .content {
+      transform:scale(1.05)
+    }
+  }
+
+  .content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgba(255,255,255,0.8);
+    margin: 0 0 30px 30px;
+    transition: 0.5s;
+
+    .title{
+      font-size: 1.33rem;
+    }
+  }
+
+  .modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+
+    .modalContent{
+      display: flex;
+      width: 100%;
+      max-width: 1000px;
+      justify-content: center;
+      align-items:center;
+
+      .imgModal{
+        width: 85%;
+        max-height: 500px;
+        border-radius: 40px;
+        object-fit:cover;
+      }
+
+      .modalDescription{
+        color:#fff;
+        margin-left:30px;
+        display: flex;
+        flex-direction: column;
+        width:400px;
+        align-items:center;
+
+        .modalTitle{
+          display:inline;
+        }
+        .youtube{
+          color:#fff;
+          display: flex;
+          gap:20px;
+
+          & a{
+            color:inherit;
+            & svg{
+                height:60px;
+                width:60px;
+            }
+          }
+        }
+      }
+
+    }
+
+    .closeImg{
+      position: absolute;
+      top:15px;
+      right: 35px;
+      color:#f1f1f1;
+      font-size:40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .closeImg:hover, .closeImg:focus{
+      color:#bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .close{
+    display: none;
+  }
+}
+
+@media screen and (max-width:1024px){
+    
+    .modalContent{
+        flex-direction:column;
+    }
+                
+}
+
+@media screen and (max-width:375px){
+    .dishCard{
+        width: 310px;
+    }
+}

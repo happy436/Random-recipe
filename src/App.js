@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from "react"
+import s from './styles/App.module.scss';
+import RandomDish from "./pages/random-dish/Random-dish";
+import Favourites from "./pages/favourites/Favourites";
+import {Routes, Route} from "react-router-dom";
+import {fetchRecipe} from "./redux/RecipeReducer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App({state, dispatch}) {
+
+    useEffect(() => {
+        dispatch(fetchRecipe())
+    }, [])
+    return (
+        <div className={s.App}>
+            <Routes>
+                <Route path="/" element={
+                    <RandomDish
+                        state={state.recipe.meals}
+                        dispatch={dispatch}
+                    />}
+                />
+                <Route path="/favourites" element={
+                    <Favourites
+                        state={state.favourite}
+                        dispatch={dispatch}
+                    />}
+                />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
