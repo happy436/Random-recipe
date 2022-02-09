@@ -5,7 +5,7 @@ import Favourites from "./pages/favourites/Favourites";
 import {Routes, Route} from "react-router-dom";
 import {fetchRecipe} from "./redux/RecipeReducer";
 
-function App({state, dispatch, rootURL}) {
+function App({state, dispatch}) {
 
     useEffect(() => {
         dispatch(fetchRecipe())
@@ -13,13 +13,13 @@ function App({state, dispatch, rootURL}) {
     return (
         <div className={s.App}>
             <Routes>
-                <Route path={`${rootURL}/`} element={
+                <Route path={`/Random-recipe/`} element={
                     <RandomDish
                         state={state.recipe.meals}
                         dispatch={dispatch}
                     />}
                 />
-                <Route path={`${rootURL}/favourites`} element={
+                <Route path={`/Random-recipe/favourites`} element={
                     <Favourites
                         state={state.favourite}
                         dispatch={dispatch}

@@ -9,13 +9,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 let reRender = (state) => {
 
-    const rootURL = "https://happy436.github.io/Random-recipe"
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <Header rootURL={rootURL}/>
+                <Header />
                 <App
-                    rootURL={rootURL}
                     state={store.getState().RecipeReducer}
                     dispatch={store.dispatch}
                 />
