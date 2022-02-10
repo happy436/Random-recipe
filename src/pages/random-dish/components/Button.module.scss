@@ -76,11 +76,7 @@
 
 .like{
 
-    &:hover{
-        color:rgb(35, 88, 71);
-        background: rgb(85, 253, 197);
-        box-shadow: 0 0 10px rgb(85, 253, 197), 0 0 40px rgb(85, 253, 197), 0 0 80px rgb(85, 253, 197);
-    }
+    
 
     color: rgb(85, 253, 197);
 
@@ -102,11 +98,7 @@
 }
 
 .dislike{
-    &:hover{
-        color:rgb(121, 43, 41);
-        background: rgb(253, 91, 85);
-        box-shadow: 0 0 10px rgb(253, 91, 85), 0 0 40px rgb(253, 91, 85), 0 0 80px rgb(253, 91, 85);
-    }
+    
 
     color: rgb(253, 91, 85);
 
@@ -124,5 +116,24 @@
 
     & span:nth-child(4){
         background: linear-gradient(360deg, transparent, rgb(253, 91, 85));
+    }
+}
+
+@media screen and (min-width:1024px){
+    .dislike{
+        &:hover{
+            color:rgb(121, 43, 41);
+            background: rgb(253, 91, 85);
+            box-shadow: 0 0 10px rgb(253, 91, 85), 0 0 40px rgb(253, 91, 85), 0 0 80px rgb(253, 91, 85);
+        }
+    }
+
+    .like{
+
+        &:hover{
+            color:rgb(35, 88, 71);
+            background: rgb(85, 253, 197);
+            box-shadow: 0 0 10px rgb(85, 253, 197), 0 0 40px rgb(85, 253, 197), 0 0 80px rgb(85, 253, 197);
+        }
     }
 }
