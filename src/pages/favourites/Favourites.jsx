@@ -23,9 +23,11 @@ const Favourites = ({state, dispatch}) => {
         }
     }
     return (
-        <div className={s.wrapper}>
-            {EmptyState()}
-        </div>
+        <section>
+            <ul className={s.wrapper}>
+                {EmptyState()}
+            </ul>
+        </section>
     );
 };
 

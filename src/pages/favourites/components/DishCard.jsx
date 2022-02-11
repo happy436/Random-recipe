@@ -27,7 +27,7 @@ const DishCard = ({img, title, category, area, youtube, type, dispatch, index}) 
     }
 
     return (
-        <div className={s.dishCard}>
+        <li className={s.dishCard}>
             {DeleteButton()}
             {EmptyImg()}
             <span className={s.content}>
@@ -50,7 +50,7 @@ const DishCard = ({img, title, category, area, youtube, type, dispatch, index}) 
                 </span>
 
             </div>
-        </div>
+        </li>
     );
 };
 

@@ -14,12 +14,12 @@ export const Button = ({BtnClass, Image, dispatch, type, state}) => {
     }
 
     return (
-        <div className={`${s.button} ${BtnClass}`} onClick={ClickEventListere}>
+        <button className={`${s.button} ${BtnClass}`} onClick={ClickEventListere}>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             {Image}
-        </div>
+        </button>
     )
 }

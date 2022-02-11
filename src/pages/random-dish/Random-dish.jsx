@@ -8,7 +8,7 @@ import BtnStyle from "./components/Button.module.scss"
 const RandomDish = ({ state, dispatch }) => {
 
     return (
-        <div className={s.wrapper}>
+        <section className={s.wrapper}>
             <Button BtnClass={BtnStyle.dislike} state={state} Image={<UilThumbsDown/>} type="skip" dispatch={dispatch}/>
             {state.map(item =>
                 <DishCard
@@ -21,7 +21,7 @@ const RandomDish = ({ state, dispatch }) => {
                     type="Random dish"
                 />)}
             <Button BtnClass={BtnStyle.like} state={state} Image={<UilThumbsUp/>} type="add" dispatch={dispatch}/>
-        </div>
+        </section>
     );
 };
 

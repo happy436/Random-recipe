@@ -4,14 +4,14 @@ import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
-        <div className={s.header}>
+        <header className={s.header}>
             <NavLink className={s.link} to={`/Random-recipe/`} >
                 Random Dish
             </NavLink>
             <NavLink className={s.link} to={`/Random-recipe/favourites`} >
                 Favourites
             </NavLink>
-        </div>
+        </header>
     );
 };
 

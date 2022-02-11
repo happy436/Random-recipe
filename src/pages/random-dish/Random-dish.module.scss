@@ -20,15 +20,15 @@
         gap:20px;
         justify-items:center;
         
-        & div:nth-child(2){
+        & section:nth-child(2){
             grid-area: dish;
         }
 
-        & div:nth-child(1){
+        & button:nth-child(1){
             grid-area: dis;
         }
 
-        & div::nth-child(3){
+        & button:nth-child(3){
             grid-area: like;
         }
     }
@@ -40,8 +40,9 @@
         grid-template-areas: 
             "dish dish"
             "dis like";
-        grid-template-rows: 300px 100px;
+        grid-template-rows: 400px 100px;
         grid-template-columns: 150px 150px;
+        margin-top:150px;
         
     }
 }

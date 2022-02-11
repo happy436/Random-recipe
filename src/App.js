@@ -11,7 +11,7 @@ function App({state, dispatch}) {
         dispatch(fetchRecipe())
     }, [])
     return (
-        <div className={s.App}>
+        <main className={s.App}>
             <Routes>
                 <Route path={`/Random-recipe/`} element={
                     <RandomDish
@@ -26,7 +26,7 @@ function App({state, dispatch}) {
                     />}
                 />
             </Routes>
-        </div>
+        </main>
     );
 }
 
